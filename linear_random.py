@@ -31,7 +31,7 @@ def train(x, y, w, b, lr):
     error = y_pred - y
     w -= lr * np.dot(error, x) / n
     b -= lr * np.mean(error)
-    return w, b, np.dot(error,x)
+    return w, b, np.dot(error,x)/n
 
 # Train model for 50 epochs and display line and points after each epoch
 
